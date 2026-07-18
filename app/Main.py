@@ -1,4 +1,10 @@
 import scan as s
+import detect as d
+
 
 root = './unsorted'
-s.scan(root)
+items = s.scan(root)
+
+fileinfo = d.detect(items)
+for ext , name in fileinfo.items():
+    print(f'filename is {name} and it is a {ext}')
